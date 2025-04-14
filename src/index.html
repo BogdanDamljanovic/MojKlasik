@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <style>
+    
+  </style>
+  <title>MojKlasik</title>
+</head>
+<body class="w-full h-screen bg-cover bg-center" style="background-image: url('pozadina2.jpg');">
+  <div >
+  <div class="w-full h-[100px] flex flex-row items-center justify-between bg-black">
+    <a href="index.html" class="text-amber-50 font-bold italic text-2xl hover:text-amber-300 ml-60">Moj Klasik</a>
+    <a href="postavi_oglas.html" type="button" class="mr-60 flex items-center justify-center w-32 h-10 rounded-md hover:bg-blue-600 text-amber-50 bg-blue-800">Postavi oglas</a>
+  </div>
+<!--bg-linear-to-r from-gray-50 to-gray-300 -->
+  <div class="bg-gray-100 border-gray-300 border h-56 rounded-xl mx-52 mt-28 flex flex-col justify-around">
+
+    <div class="flex flex-row justify-around">   
+      <input list="marka" placeholder="Marka automobila" class="placeholder-black text-center h-8 w-1/4 border-1 rounded-sm bg-amber-200 border-amber-500 hover:bg-amber-300 hover:placeholder-black hover:border-2">
+      <datalist id="marka">
+        <option value="Mercedes-Benz">
+        <option value="BMW">
+        <option value="Audi">
+        <option value="Porsche">
+        <option value="Jaguar">
+      </datalist>  
+
+      <input list="model" placeholder="Model" class="placeholder-black text-center h-8 w-1/4 border-1 rounded-sm bg-amber-200 border-amber-500 hover:bg-amber-300 hover:placeholder-black hover:border-2">
+      <datalist id="model">
+        <option value="w123">
+        <option value="w124">
+        <option value="w210">
+      </datalist>  
+      
+      <input list="gorivo" placeholder="Gorivo" class="placeholder-black text-center h-8 w-1/4 border-1 rounded-sm bg-amber-200 border-amber-500 hover:bg-amber-300 hover:placeholder-black hover:border-2">
+      <datalist id="gorivo">
+        <option value="Benzin">
+        <option value="Dizel">
+        <option value="Elektricni pogon">
+        <option value="Hibridni pogon">
+      </datalist>  
+              
+    </div>
+
+    <div class="flex flex-row justify-around">   
+      <div class="flex flex-row justify-between w-1/4">
+        <input list="godisteOd" placeholder="Godište od" class="w-[47%] placeholder-black text-center h-8 border-1 rounded-sm bg-amber-200 border-amber-500 hover:bg-amber-300 hover:placeholder-black hover:border-2">
+        <datalist id="godisteOd">
+          <option value="2025">
+          <option value="2024">
+          <option value="2023">
+          <option value="2022">
+          <option value="2021">
+          <option value="2020">
+          <option value="2019">
+        </datalist>  
+
+        <input list="godisteDo" placeholder="do" class="w-[47%] placeholder-black text-center h-8 border-1 rounded-sm bg-amber-200 border-amber-500 hover:bg-amber-300 hover:placeholder-black hover:border-2">
+        <datalist id="godisteDo">
+          <option value="2025">
+            <option value="2024">
+            <option value="2023">
+            <option value="2022">
+            <option value="2021">
+            <option value="2020">
+            <option value="2019">
+          </datalist>  
+  
+      </div>
+
+      <input list="karoserija" placeholder="Karoserija" class="placeholder-black text-center h-8 w-1/4 border-1 rounded-sm bg-amber-200 border-amber-500 hover:bg-amber-300 hover:placeholder-black hover:border-2">
+      <datalist id="karoserija">
+        <option value="Limuzina">
+        <option value="Karavan">
+        <option value="Kupe">
+        <option value="Hečbek">
+        <option value="Monovolumen">
+        <option value="Kabriolet">
+
+      </datalist>  
+
+      <input list="region" placeholder="Region" class="placeholder-black text-center h-8 w-1/4 border-1 rounded-sm bg-amber-200 border-amber-500 hover:bg-amber-300 hover:placeholder-black hover:border-2">
+      <datalist id="region">
+        <option value="Beograd">
+        <option value="Centralna Srbija">
+        <option value="Istocna Srbija">
+        <option value="Juzna Srbija">
+        <option value="Zapadna Srbija">
+        <option value="Kosovo i Metohija">
+        <option value="Vojvodina">
+
+      </datalist>  
+    </div>
+    <div class="flex flex-row justify-around ">
+      <a href="pretraga.html" class="flex items-center justify-center h-10 w-1/3 text-xl bg-amber-400 border-2 border-amber-500 rounded-sm hover:text-2xl hover:bg-amber-500 hover:border-amber-600">Pretraži</a>
+    </div>
+
+
+
+
+  </div>
+</div>
+
+</body>
+</html>
