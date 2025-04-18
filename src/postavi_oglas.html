@@ -7,6 +7,422 @@
     <title>Postavi oglas</title>
 </head>
 <body>
-<h1>postavi oglas</h1>
+    <div class="w-full h-[100px] flex flex-row items-center justify-between bg-black">
+        <a href="index.html" class="text-amber-50 font-bold italic text-2xl hover:text-amber-300 ml-60">Moj Klasik</a>
+        <a href="postavi_oglas.html" type="button" class="mr-60 flex items-center justify-center w-32 h-10 rounded-md hover:bg-blue-600 text-amber-50 bg-blue-800">Postavi oglas</a>
+    </div>
+    <br>
+    <div
+    id="preview-container"
+    class="w-full max-w-xl h-72 mx-auto border border-gray-300 rounded-lg bg-gray-100 p-3 flex flex-wrap gap-3 overflow-y-auto"></div>
+    <div class="flex justify-center mb-1 mt-4">
+        <label
+        for="imageUpload"
+        class="inline-block cursor-pointer bg-amber-200 border-1 border-amber-400 text-black font-medium px-4 py-2 rounded-md hover:bg-amber-300 hover:border-amber-500 hover:border-1 transition mb-4">
+        Dodaj slike +
+      </label>
+    
+      <input id="imageUpload" type="file" accept="image/*" multiple onchange="previewImages(event)" class="hidden"/>
+    </div>
+    <div class="w-1/2 text-center mx-auto text-gray-400">Maksimalan broj fotografija je 10</div>
+
+    <hr class="h-px my-8 bg-gray-300 border-0 dark:bg-gray-700 w-[80%] mx-auto">
+
+    <div class="w-[40%] ml-[10%] flex flex-col gap-2">
+      <div class="text-amber-300 text-2xl font-bold">Osnovne informacije</div>
+      <div class="mt-2 justify-around flex flex-row">
+        <div class="w-[48%]">
+
+          <input list="marka" placeholder="Marka automobila" class="placeholder-gray-600 text-center h-8 w-full border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+          <datalist id="marka">
+            <option value="Mercedes-Benz">
+            <option value="BMW">
+            <option value="Audi">
+            <option value="Porsche">
+            <option value="Jaguar">
+          </datalist>
+        </div>
+
+        <div class="w-[48%]">
+
+          <input list="model" placeholder="Model" class="placeholder-gray-600 text-center h-8 w-full border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+          <datalist id="model">
+            <option value="w123">
+            <option value="w124">
+            <option value="w210">
+          </datalist>  
+        </div>
+      </div>
+
+      <div class="flex flex-row justify-around">
+        <div class="w-[48%] flex flex-row justify-between">
+
+          <div class="content-center">Godište:</div>
+          <div class="w-auto">
+
+            <input type="text" class="placeholder-gray-600 text-center h-8 w-full border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+          </div>
+        </div>
+        <div class="w-[48%]">
+          <input list="karoserija" placeholder="Karoserija" class="placeholder-gray-600 w-full text-center h-8 border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+          <datalist id="karoserija">
+            <option value="Limuzina">
+            <option value="Karavan">
+            <option value="Kupe">
+            <option value="Hečbek">
+            <option value="Monovolumen">
+            <option value="Kabriolet">
+    
+          </datalist>  
+    
+        </div>
+      </div>
+
+      <div class="flex flex-row justify-around">
+        <div class="w-[48%]">
+          <input list="gorivo" placeholder="Gorivo" class="placeholder-gray-600 w-full text-center h-8 border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+          <datalist id="gorivo">
+            <option value="Benzin">
+            <option value="Dizel">
+            <option value="Elektricni pogon">
+            <option value="Hibridni pogon">
+          </datalist>  
+    
+        </div>
+        <div class="w-[48%]"></div>
+      </div>
+      <div class="text-amber-300 text-2xl font-bold mt-4">Dodatne informacije</div>
+      <div class="flex flex-row justify-around mt-2">
+        <div class="w-[23%] content-end">
+          Kubikaža:
+        </div>
+        <div class="w-[23%]">
+
+          <input type="text" class="placeholder-gray-600 text-center h-8 w-full border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+        </div>
+
+        <div class="w-[23%] content-end">
+          Kilometraža:
+        </div>
+        <div class="w-[23%]">
+
+          <input type="text" class="placeholder-gray-600 text-center h-8 w-full border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+        </div>
+
+      </div>
+      <div class="flex flex-row justify-around">
+        <div class="w-[23%] content-end">
+          Snaga(kW):
+        </div>
+        <div class="w-[23%]">
+
+          <input type="text" class="placeholder-gray-600 text-center h-8 w-full border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+        </div>
+
+        <div class="w-[23%] content-end">
+          Snaga(KS):
+        </div>
+        <div class="w-[23%]">
+
+          <input type="text" class="placeholder-gray-600 text-center h-8 w-full border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+        </div>
+
+      </div>
+      <div class="justify-around flex flex-row">
+        <div class="w-[48%]">
+
+          <input list="pogon" placeholder="Pogon" class="placeholder-gray-600 text-center h-8 w-full border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+          <datalist id="pogon">
+            <option value="Prednji">
+            <option value="Zadnji">
+            <option value="4x4">
+          </datalist>
+        </div>
+
+        <div class="w-[48%]">
+
+          <input list="menjac" placeholder="Menjač" class="placeholder-gray-600 text-center h-8 w-full border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+          <datalist id="menjac">
+            <option value="Manuelni 4 brzine">
+            <option value="Manuelni 5 brzina">
+            <option value="Manuelni 6 brzina">
+            <option value="Automatski">
+
+          </datalist>  
+        </div>
+      </div>
+      <div class="justify-around flex flex-row">
+        <div class="w-[48%]">
+
+          <input list="vrata" placeholder="Broj vrata" class="placeholder-gray-600 text-center h-8 w-full border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+          <datalist id="vrata">
+            <option value="2/3">
+            <option value="4/5">
+          </datalist>
+        </div>
+
+        <div class="w-[48%]">
+
+          <input list="sedista" placeholder="Broj sedišta" class="placeholder-gray-600 text-center h-8 w-full border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+          <datalist id="sedista">
+            <option value="2 sedišta">
+            <option value="3 sedišta">
+            <option value="4 sedišta">
+            <option value="5 sedišta">
+            <option value="6 sedišta">
+            <option value="7 sedišta">
+            <option value="8 sedišta">
+            <option value="9 sedišta">
+
+          </datalist>  
+        </div>
+      </div>
+      <div class="justify-around flex flex-row">
+        <div class="w-[48%]">
+
+          <input list="boja" placeholder="Boja" class="placeholder-gray-600 text-center h-8 w-full border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+          <datalist id="boja">
+            <option value="Crvena">
+            <option value="Zelena">
+            <option value="Plava">
+            <option value="Crna">
+            </datalist>
+        </div>
+
+        <div class="w-[48%]">
+
+          <input list="bojaEnt" placeholder="Boja enterijera" class="placeholder-gray-600 text-center h-8 w-full border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+          <datalist id="bojaEnt">
+            <option value="Crna">
+            <option value="Plava">
+            <option value="Bež">
+            <option value="Siva">
+            <option value="Druga">
+          </datalist>  
+        </div>
+      </div>
+      <div class="justify-around flex flex-row">
+        <div class="w-[48%]">
+
+          <input list="materijal" placeholder="Materijal enterijera" class="placeholder-gray-600 text-center h-8 w-full border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+          <datalist id="materijal">
+            <option value="Koža">
+            <option value="Štof">
+            <option value="Koža/Štof">
+            <option value="Velur">
+            <option value="Drugo">
+            </datalist>
+        </div>
+
+        <div class="w-[48%]">
+
+          <input list="volan" placeholder="Strana volana" class="placeholder-gray-600 text-center h-8 w-full border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+          <datalist id="volan">
+            <option value="Levi volan">
+            <option value="Desni volan">
+          </datalist>  
+        </div>
+      </div>
+      <div class="text-amber-300 text-2xl font-bold mt-4">Originalnost</div>
+      <div class="text-amber-300 text-2xl font-bold mt-4">Dodatna oprema</div>
+      
+      
+      
+    </div>
+
+    <div class="w-[80%] ml-[10%] flex flex-col gap-4 mt-4">
+      <div class="flex flex-row">
+        <div class="w-[25%]">
+          <input type="checkbox" id="klima" name="klima" value="poseduje">
+          <label for="klima">Klima</label>
+        </div>
+        <div class="w-[25%]">
+          <input type="checkbox" id="podizaci" name="podizaci" value="poseduje">
+          <label for="podizaci">Električni podizači</label>
+        </div>
+        <div class="w-[25%]">
+          <input type="checkbox" id="siber" name="siber" value="poseduje">
+          <label for="siber">Šiber</label>
+        </div>
+        <div class="w-[25%]">
+          <input type="checkbox" id="grSedista" name="grSedista" value="poseduje">
+          <label for="grSedista">Grejanje sedišta</label>
+        </div>
+      </div>
+
+      <div class="flex flex-row">
+        <div class="w-[25%]">
+          <input type="checkbox" id="serVolan" name="serVolan" value="poseduje">
+          <label for="serVolan">Servo volan</label>
+        </div>
+        <div class="w-[25%]">
+          <input type="checkbox" id="tempomat" name="tempomat" value="poseduje">
+          <label for="tempomat">Tempomat</label>
+        </div>
+        <div class="w-[25%]">
+          <input type="checkbox" id="zakljucavanje" name="zakljucavanje" value="poseduje">
+          <label for="zakljucavanje">Centralno zaključavanje</label>
+        </div>
+        <div class="w-[25%]">
+          <input type="checkbox" id="stakla" name="stakla" value="poseduje">
+          <label for="stakla">Tonirana stakla</label>
+        </div>
+      </div>
+
+      <div class="flex flex-row">
+        <div class="w-[25%]">
+          <input type="checkbox" id="elSedista" name="elSedista" value="poseduje">
+          <label for="elSedista">Elektro podesiva sedišta</label>
+        </div>
+        <div class="w-[25%]">
+          <input type="checkbox" id="retrovizori" name="retrovizori" value="poseduje">
+          <label for="retrovizori">Električni retrovizori</label>
+        </div>
+        <div class="w-[25%]">
+          <input type="checkbox" id="felne" name="felne" value="poseduje">
+          <label for="felne">Aluminijumske felne</label>
+        </div>
+        <div class="w-[25%]">
+          <input type="checkbox" id="radio" name="radio" value="poseduje">
+          <label for="radio">Radio/Kasetofon</label>
+        </div>
+      </div>
+
+      <div class="flex flex-row">
+        <div class="w-[25%]">
+          <input type="checkbox" id="naslon" name="naslon" value="poseduje">
+          <label for="naslon">Naslon za ruku</label>
+        </div>
+        <div class="w-[25%]">
+          <input type="checkbox" id="magla" name="magla" value="poseduje">
+          <label for="magla">Svetla za maglu</label>
+        </div>
+        <div class="w-[25%]">
+          <input type="checkbox" id="kVolan" name="kVolan" value="poseduje">
+          <label for="kVolan">Kožni volan</label>
+        </div>
+        <div class="w-[25%]">
+          <input type="checkbox" id="vazduh" name="vazduh" value="poseduje">
+          <label for="vazduh">Vazdušno vešanje</label>
+        </div>
+      </div>
+
+      <div class="flex flex-row">
+        <div class="w-[25%]">
+          <input type="checkbox" id="rezTocak" name="rezTocak" value="poseduje">
+          <label for="rezTocak">Rezervni točak</label>
+        </div>
+        <div class="w-[25%]">
+          <input type="checkbox" id="frizider" name="frizider" value="poseduje">
+          <label for="frizider">Frižider</label>
+        </div>
+        <div class="w-[25%]">
+          <input type="checkbox" id="podVolan" name="podVolan" value="poseduje">
+          <label for="podVolan">Podesiv volan</label>
+        </div>
+        <div class="w-[25%]">
+          <input type="checkbox" id="kuka" name="kuka" value="poseduje">
+          <label for="kuka">Kuka za vuču</label>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="text-amber-300 text-2xl font-bold mt-4 ml-[10%]">Opis oglasa</div>
+
+    <textarea name="opis" id="opis" class="mt-4 p-2.5 w-[80%] ml-[10%] border border-gray-300 rounded-lg bg-gray-100 placeholder:text-center text-justify" rows="5" placeholder="Unesite opis oglasa.."></textarea>
+
+    <div class="text-amber-300 text-2xl font-bold mt-4 ml-[10%]">Cena</div>
+
+    <div class="w-[40%] ml-[10%] flex flex-col justify-between mt-4">
+      <div class="flex flex-row justify-around">
+        <div class="w-[15%] content-end">
+          Cena:
+        </div>
+        <div class="w-[31%] content-end">
+  
+          <input type="text" placeholder="Po dogovoru" class="placeholder-gray-600 text-center h-8 w-full border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+        </div>
+        
+        <div class="w-[31%] content-end">
+          <input type="checkbox" id="fiksna" name="fiksna" value="poseduje">
+          <label for="finska">Fiksna cena</label>
+        </div>
+        <div class="w-[15%]"></div>
+
+    </div>
+    </div>
+
+    <div class="text-amber-300 text-2xl font-bold mt-4 ml-[10%]">Kontakt podaci</div>
+
+    <div class="w-[40%] ml-[10%] flex flex-col gap-2 mt-4 pb-8">
+
+      <div class="flex flex-row justify-around mt-2">
+        <div class="w-[15%] content-end">
+          Ime:
+        </div>
+        <div class="w-[31%]">
+  
+          <input type="text" class="placeholder-gray-600 text-center h-8 w-full border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+        </div>
+  
+        <div class="w-[15%] content-end">
+          Prezime:
+        </div>
+        <div class="w-[31%]">
+  
+          <input type="text" class="placeholder-gray-600 text-center h-8 w-full border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+        </div>
+  
+      </div>
+      <div class="flex flex-row justify-around">
+        <div class="w-[15%] content-end">
+          Telefon:
+        </div>
+        <div class="w-[31%]">
+  
+          <input type="text" class="placeholder-gray-600 text-center h-8 w-full border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+        </div>
+  
+        <div class="w-[15%] content-end">
+          Grad(Mesto):
+        </div>
+        <div class="w-[31%]">
+  
+          <input type="text" class="placeholder-gray-600 text-center h-8 w-full border-1 rounded-sm bg-gray-100 border-gray-300 hover:bg-gray-200 hover:placeholder-black hover:border-2">
+        </div>
+  
+      </div>
+    </div>
+
+
+
+  
+      
+    <script>
+      function previewImages(event) {
+        const files = Array.from(event.target.files).slice(0, 10); // max 10 slika
+        const container = document.getElementById("preview-container");
+        container.innerHTML = ""; // očisti prethodni prikaz
+    
+        files.forEach(file => {
+          if (!file.type.startsWith('image/')) return;
+    
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            const img = document.createElement("img");
+            img.src = e.target.result;
+            img.style.maxWidth = "100px";
+            img.style.maxHeight = "100px";
+            img.style.objectFit = "cover";
+            img.style.border = "1px solid #ccc";
+            img.style.borderRadius = "8px";
+            container.appendChild(img);
+          };
+          reader.readAsDataURL(file);
+        });
+      }
+    </script>
+
 </body>
 </html>
